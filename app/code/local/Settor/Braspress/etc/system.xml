@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+
+<config>
+	<sections>
+		<carriers translate="label" module="shipping">
+			<groups>
+				<settor_braspress translate="label">
+					<label>Braspress</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+
+						<active translate="label">
+							<label>Enabled</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</active>
+
+						<title translate="label">
+							<label>Title</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</title>
+
+						<meios translate="label">
+							<label>Meio de Cálculo</label>
+							<frontend_type>select</frontend_type>
+							<source_model>settor_braspress/source_meios</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Para cálculo online é necessário tem contrato com a Braspress</comment>
+						</meios>
+
+						<tabela translate="label">
+							<label>Tabela</label>
+							<frontend_type>file</frontend_type>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+							<upload_dir config="system/filesystem/media" scope_info="1">settor/braspress</upload_dir>
+							<base_url type="media" scope_info="1">settor/braspress</base_url>
+							<sort_order>40</sort_order>
+							<show_in_default>0</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+							<depends><meios>offline</meios></depends>
+						</tabela>
+
+						<cnpj translate="label">
+							<label>CNPJ</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends><meios>online</meios></depends>
+						</cnpj>
+
+						<tipos translate="label">
+							<label>Tipos de Entrega</label>
+							<frontend_type>multiselect</frontend_type>
+							<source_model>settor_braspress/source_tipos</source_model>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends><meios>online</meios></depends>
+						</tipos>
+
+						<prazo translate="label">
+							<label>Mostrar Prazo de Entrega</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</prazo>
+
+						<!--
+						<showmethod translate="label">
+                            <label>Mostrar Erros</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>900</sort_order>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Se houver um erro ou o método não for aplicável, mesmo assim mostrar as mensagens de erro?</comment>
+                        </showmethod>
+						-->
+
+                        <sort_order translate="label">
+							<label>Sort Order</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1000</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</sort_order>
+
+					</fields>
+				</settor_braspress>
+			</groups>
+		</carriers>
+	</sections>
+</config>

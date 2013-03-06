@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config>
+
+	<modules>
+		<Settor_Braspress>
+			<version>0.1.0</version>
+		</Settor_Braspress>
+	</modules>
+	
+	<global>
+		<models>
+			<settor_braspress>
+				<class>Settor_Braspress_Model</class>
+			</settor_braspress>
+		</models>
+
+		<helpers>
+			<settor_braspress>
+				<class>Settor_Braspress_Helper</class>
+			</settor_braspress>
+		</helpers>
+
+		<sales>
+			<shipping>
+				<carriers>
+					<settor_braspress>
+						<class>Settor_Braspress_Model_Carrier_Method</class>
+					</settor_braspress>
+				</carriers>
+			</shipping>
+		</sales>
+
+	</global>
+
+	<default>
+		<carriers>
+			<settor_braspress>
+				
+				<model>Settor_Braspress_Model_Carrier_Method</model>
+				<active>0</active>
+				<title>Braspress</title>
+				<meios>online</meios>
+				<tipos>1,2</tipos>
+				<cnpj></cnpj>
+				<showmethod>0</showmethod>
+                <sort_order>0</sort_order>
+                <caminho>./media/settor/braspress/</caminho>
+				
+			</settor_braspress>
+		</carriers>
+	</default>
+
+</config>

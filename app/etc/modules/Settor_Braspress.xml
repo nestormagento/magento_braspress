@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <modules>
+        <Settor_Braspress>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Settor_Braspress>
+    </modules>
+</config>
